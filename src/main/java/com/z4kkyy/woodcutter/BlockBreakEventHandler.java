@@ -19,6 +19,7 @@ import net.minecraftforge.event.level.BlockEvent;
 
 
 public class BlockBreakEventHandler {
+
     public static final Logger LOGGER = LogUtils.getLogger();
 
     @SubscribeEvent

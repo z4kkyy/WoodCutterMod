@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 
 public class TreeDetector {
+
     public static Set<BlockPos> detectTree(Level world, BlockPos startPos) {
         // startPos = pos of the block broken first
         BlockState startState = world.getBlockState(startPos);

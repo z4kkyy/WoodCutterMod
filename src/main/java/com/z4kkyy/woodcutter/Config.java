@@ -27,7 +27,7 @@ public class Config {
                     .define("enableMod", true);
 
             damageAxe = builder
-                    .comment("斧の耐久性の損失の有/無")
+                    .comment("斧の耐久地の損失の有/無")
                     .define("damageAxe", true);
 
             builder.pop();

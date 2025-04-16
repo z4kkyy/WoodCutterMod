@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.level.BlockEvent;
 
@@ -35,6 +36,9 @@ public class BlockBreakEventHandler {
         }
 
         ItemStack heldItem = player.getMainHandItem();
+        if (!heldItem.canPerformAction(ToolActions.AXE_DIG)) {
+            return;
+        }
 
         if (!(event.getLevel() instanceof ServerLevel)) {
             return;

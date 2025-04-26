@@ -19,6 +19,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.level.BlockEvent;
+import net.minecraft.data.worldgen.biome.OverworldBiomes;
 
 
 public class BlockBreakEventHandler {
@@ -31,7 +32,9 @@ public class BlockBreakEventHandler {
         BlockState state = event.getState();
         BlockPos pos = event.getPos();
 
-        // LOGGER.info("BlockEvent.BreakEvent Detected at: " + pos.toString() + " by player: " + player.getName().getString());
+        if (!player.isCrouching()) {
+            return;
+        }
 
         if (!state.is(BlockTags.LOGS)) {
             return;

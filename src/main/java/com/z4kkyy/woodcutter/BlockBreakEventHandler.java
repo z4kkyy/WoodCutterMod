@@ -19,7 +19,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.level.BlockEvent;
-import net.minecraft.data.worldgen.biome.OverworldBiomes;
 
 
 public class BlockBreakEventHandler {
